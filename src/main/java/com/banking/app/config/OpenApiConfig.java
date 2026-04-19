@@ -27,6 +27,7 @@ public class OpenApiConfig {
                                 .name("Apache 2.0")
                                 .url("https://www.apache.org/licenses/LICENSE-2.0")))
                 .servers(List.of(
+                        new Server().url("https://banking-app-tkf5.onrender.com").description("Serveur de production (Render)"),
                         new Server().url("http://localhost:8080").description("Serveur de développement")
                 ));
     }
