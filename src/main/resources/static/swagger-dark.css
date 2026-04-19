@@ -1,0 +1,150 @@
+/* ========================================
+   Swagger UI Dark Theme
+   ======================================== */
+
+/* --- Base --- */
+.swagger-ui,
+body {
+    background-color: #1a1a2e !important;
+    color: #e0e0e0 !important;
+}
+
+/* --- Topbar --- */
+.swagger-ui .topbar {
+    background-color: #16213e !important;
+    border-bottom: 1px solid #0f3460;
+}
+.swagger-ui .topbar .download-url-wrapper input[type=text] {
+    background: #0f3460;
+    color: #e0e0e0;
+    border: 1px solid #0f3460;
+}
+
+/* --- Info section --- */
+.swagger-ui .info .title,
+.swagger-ui .info p,
+.swagger-ui .info li,
+.swagger-ui .info h1,
+.swagger-ui .info h2,
+.swagger-ui .info h3 {
+    color: #e0e0e0 !important;
+}
+
+/* --- Tags (section headers) --- */
+.swagger-ui .opblock-tag {
+    color: #a3cfff !important;
+    border-bottom: 1px solid #0f3460 !important;
+}
+.swagger-ui .opblock-tag:hover {
+    background: #16213e !important;
+}
+
+/* --- Operation blocks --- */
+.swagger-ui .opblock {
+    background: #16213e !important;
+    border: 1px solid #0f3460 !important;
+    border-radius: 6px;
+}
+.swagger-ui .opblock .opblock-summary {
+    background: #16213e !important;
+}
+.swagger-ui .opblock .opblock-summary-description {
+    color: #c0c0c0 !important;
+}
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+    background: #1d6fa5 !important;
+}
+.swagger-ui .opblock.opblock-post .opblock-summary-method {
+    background: #1a6b3c !important;
+}
+.swagger-ui .opblock.opblock-delete .opblock-summary-method {
+    background: #8b2020 !important;
+}
+
+/* --- Operation body --- */
+.swagger-ui .opblock-body {
+    background: #1e2240 !important;
+}
+.swagger-ui .opblock-description-wrapper p,
+.swagger-ui .opblock-external-docs-wrapper p,
+.swagger-ui .opblock-section-header h4,
+.swagger-ui table thead tr th,
+.swagger-ui .parameter__name,
+.swagger-ui .parameter__type,
+.swagger-ui .response-col_status,
+.swagger-ui .response-col_description {
+    color: #c0c0c0 !important;
+}
+
+/* --- Tables --- */
+.swagger-ui table tbody tr td {
+    background: #1a1a2e !important;
+    color: #c0c0c0 !important;
+    border-color: #0f3460 !important;
+}
+
+/* --- Textareas & inputs --- */
+.swagger-ui textarea,
+.swagger-ui input[type=text],
+.swagger-ui input[type=email],
+.swagger-ui input[type=password] {
+    background: #0f3460 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #3a6fa5 !important;
+}
+
+/* --- Buttons --- */
+.swagger-ui .btn {
+    background: #0f3460 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #3a6fa5 !important;
+}
+.swagger-ui .btn.execute {
+    background: #1a6b3c !important;
+    border-color: #2ecc71 !important;
+}
+.swagger-ui .btn.cancel {
+    background: #8b2020 !important;
+    border-color: #e74c3c !important;
+}
+
+/* --- Models section --- */
+.swagger-ui section.models {
+    background: #16213e !important;
+    border: 1px solid #0f3460 !important;
+    border-radius: 6px;
+}
+.swagger-ui section.models h4 {
+    color: #a3cfff !important;
+}
+.swagger-ui .model-container {
+    background: #1a1a2e !important;
+}
+.swagger-ui .model {
+    color: #c0c0c0 !important;
+}
+
+/* --- Schema/type labels --- */
+.swagger-ui .prop-type {
+    color: #82b1ff !important;
+}
+.swagger-ui .prop-format {
+    color: #a5d6a7 !important;
+}
+
+/* --- Response code badges --- */
+.swagger-ui .response-col_status {
+    color: #a5d6a7 !important;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+    background: #0f3460;
+    border-radius: 4px;
+}
