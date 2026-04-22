@@ -1,31 +1,17 @@
+# ========================================
+# CONFIGURATION COMMUNE
+# ========================================
+
 spring:
+  profiles:
+    active: dev # Profil actif par défaut
+  
   application:
     name: banking-app
 
-# ======================
-# DATASOURCE (PostgreSQL)
-#========================
-  datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/banking_db}
-    username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:root}
-    driver-class-name: org.postgresql.Driver
-
-# ========================
-# JPA / HIBERNATE
-# ========================
   jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: false
-    properties:
-      hibernate:
-        '[format_sql]': false
     open-in-view: false
 
-# ========================
-# JACKSON
-# ========================
   jackson:
     serialization:
       fail-on-empty-beans: false

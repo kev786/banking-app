@@ -13,6 +13,8 @@ import java.util.List;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    private static final String BAD_REQUEST = "Bad Request";
+
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ApiError> handleNotFound(ResourceNotFoundException ex,
                                                     HttpServletRequest request) {
@@ -29,6 +31,22 @@ public class GlobalExceptionHandler {
                 .body(ApiError.of(409, "Conflict", ex.getMessage(), request.getRequestURI()));
     }
 
+    @ExceptionHandler(InsufficientFundsException.class)
+    public ResponseEntity<ApiError> handleInsufficientFunds(InsufficientFundsException ex,
+                                                           HttpServletRequest request) {
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(ApiError.of(400, BAD_REQUEST, ex.getMessage(), request.getRequestURI()));
+    }
+
+    @ExceptionHandler(AccountInactiveException.class)
+    public ResponseEntity<ApiError> handleAccountInactive(AccountInactiveException ex,
+                                                         HttpServletRequest request) {
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(ApiError.of(400, BAD_REQUEST, ex.getMessage(), request.getRequestURI()));
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiError> handleValidation(MethodArgumentNotValidException ex,
                                                       HttpServletRequest request) {
@@ -40,7 +58,7 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
-                .body(ApiError.withFieldErrors(400, "Bad Request",
+                .body(ApiError.withFieldErrors(400, BAD_REQUEST,
                         "La validation a échoué pour un ou plusieurs champs.",
                         request.getRequestURI(), fieldErrors));
     }

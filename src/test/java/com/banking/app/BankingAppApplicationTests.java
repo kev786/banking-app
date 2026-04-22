@@ -8,6 +8,8 @@ class BankingAppApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Ce test vérifie que le contexte Spring se charge correctement au démarrage
+		// Aucune assertion supplémentaire n'est nécessaire - l'absence d'exception confirme le succès
 	}
 
 }
